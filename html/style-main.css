@@ -1,0 +1,114 @@
+@CHARSET "ISO-8859-1";
+/* <!-- ********************* -->
+<!-- Inline Menu Section   -->
+<!-- ********************* -->
+<!-- this first file csshover3.htc is used in IE to fix hover over functionality --> 
+colors	#000080=dark blue
+		#F1F1F9=medium gray
+		#0000FF=bright blue
+		#e6fdc9=lime green
+		#660066=magenta
+		#FF0000=bright red
+*/
+div.container {
+	border:0;
+	padding:0;
+	margin:0;
+	font-family:"Trebuchet MS";
+}
+div.heading {
+	position:fixed;
+	width:100%;
+	top:0;
+	left:0;
+	background-color:#F5EBCC;
+	text-align:center;
+	font-size:100%;
+	font-family:"Trebuchet MS";
+}
+div.left-menu {
+	position:fixed;
+	float:left;
+	width:22.5%;
+	height:100%;
+	padding-left:5px;
+	margin-left:98px;
+	top:85px;
+	background-color:#F0F5FF;
+}
+div.content{
+	position:fixed;
+	top:86px;
+	margin-left:292px;
+	background-color:#F0F5FF;
+	width:950px;
+	height:100%;
+	overflow:auto;
+	padding:2.5px;
+}	
+div.footer {
+	position:fixed;
+	width:100%;
+	background-color:#F5EBCC;
+	text-align:center;
+	bottom:0;
+	left:0;
+	font-family:"Trebuchet MS";
+	padding:2.5px;
+}	
+body{
+	font-size:100%;
+/*	background-image:url(../images/desert-4.jpg); */
+	background-color:#F5EBCC;
+	color:#660066;
+}
+table {
+	background-color:#F0F5FF;
+	color:#660066;
+	width:900px;
+}
+td.a {
+	width:260px;
+}
+td.b {
+	width:480px;
+}
+td.c {
+	width:210px;
+}
+ul {	
+	float:left;
+	width:8em;
+	padding:0;
+	margin:0;
+	list-style-type:none;
+}
+a, label{
+	float:left;
+	width:8em;
+	text-decoration:none;
+	color:white;
+	background-color:purple;
+	padding:0.2em 0.6em;
+/*	border-bottom:1px solid white; */
+}
+.button {
+	float:right;
+	width:6em;
+	text-decoration:none;
+	color:white;
+	background-color:purple;
+	padding:0em 0.0em;
+/* !-- border-right:0px solid white; --> */
+}
+a:hover {
+	background-color:#ff3300;
+}
+/* <!-- input[type="submit"]:hover {background-color:#e6fdc9} --> */
+.button:hover {
+	background-color:#ff3300
+}
+li {
+	display:inline;
+	width:25em;
+}

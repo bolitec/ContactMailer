@@ -1,0 +1,89 @@
+<head><style type="text/css">
+<!-- ********************* -->
+<!-- Inline Menu Section   -->
+<!-- ********************* -->
+<!-- this first file csshover3.htc is used in IE to fix hover over functionality -->
+
+body {
+behavior:url(csshover.htc);
+font-size:100%;}
+
+ul
+{
+float:left;
+width:100%;
+padding:0;
+margin:0;
+list-style-type:none;
+}
+a
+{
+float:left;
+width:6em;
+text-decoration:none;
+color:white;
+background-color:purple;
+padding:0.2em 0.6em;
+border-right:1px solid white;
+}
+.button
+{
+float:right;
+width:6em;
+text-decoration:none;
+color:white;
+background-color:purple;
+padding:0em 0.0em;
+<!-- border-right:0px solid white; -->
+}
+a:hover {background-color:#ff3300}
+<!-- input[type="submit"]:hover {background-color:#e6fdc9} -->
+.button:hover {background-color:#ff3300}
+li {display:inline}
+
+</style></head>
+
+<html>
+
+<body BACKGROUND="../images/desert-4.jpg" BGCOLOR="#FFFFFF" TEXT="#66066" LINK="#000080" VLINK="#000080" alink="#0000FF">
+
+<center>
+
+<form name="member" action="<?php echo $redirect ?>" method="post"> 
+
+<table width="500" bgcolor="#660066" cellpadding="0" border="0" colspan="0" cellspacing="0">
+	<tr>
+		<td bgcolor="#000080" colspan="2" align="center">
+			<img style="vertical-align: middle;" src="<? echo $hdr_image ?>" alt="Caritas" height="100"></img></td></tr>
+	<tr>
+		<td width="500" colspan="2" align="center"><font face="arial,helvetica" size="2" color="WHITE"><b><?php echo $MsgTitle ?></b></td></tr></font> 
+<!-- remove for debug
+	<tr>
+		<td width="500" colspan="2" bgcolor="#F1F1F9" align="right"><font face="arial,helvetica" size="1" ><// ?php echo $MsgType1 ?>>>member.html</td> -->
+	<tr>
+		<td width="500" colspan="2" bgcolor="#F1F1F9" align="left"><font face="arial,helvetica" size="2" ><?php echo $MsgType2 ?></td>
+	<tr>
+		<td width="500" colspan="2" bgcolor="#F1F1F9"><font face="arial,helvetica" size="1"><br></br></td>
+	<tr>
+		<td width="500" colspan="2" bgcolor="#F1F1F9" align="CENTER"><font face="arial,helvetica" size="2"><?php echo $Msg1 ?></td>
+	<tr>
+		<td width="500" colspan="2" bgcolor="#F1F1F9" align="CENTER"><font face="arial,helvetica" size="2" ><?php echo $Msg2 ?></td>
+	<tr>
+		<td width="500" colspan="2" bgcolor="#F1F1F9"><font face="arial,helvetica" size="1"><br></br></td>
+
+<!-- Buttons defined for View, Post, and Renew funcionality -->
+	<tr>
+		<td width="500" colspan="2" align="left" bgcolor="#F1F1F9"><font face="arial,helvetica" size="2">
+		<ul>
+		<!--  <li><a href="http://www.brothercharles.org/">NAmerica</a></li>
+		<li><a href="http://www.brothercharlesofjesus.org">Boston</a></li> -->
+		<li><a href="MyProfile.php">MyProfile</a></li>
+		<li><a href="../html/Help.html">Help</a></li>
+		<li><a href="Logout.php">Logout</a></li>
+		</ul>
+	<tr>
+		<td width="555" colspan="2" align="center"><font face="arial,helvetica" size="1" color="WHITE"><b>Bolitech.com 2008-<?php echo date("Y") ?></b></td></tr></font> 
+		<td width="555" colspan="2" align="center"><font face="arial,helvetica" size="1" color="WHITE"><b>member.html</b></td></tr></font> 
+</table>
+</form>
+</center></html>

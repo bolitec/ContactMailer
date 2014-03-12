@@ -1,0 +1,23 @@
+@CHARSET "ISO-8859-1";
+#menu {
+    padding: 0;
+    margin: 0;
+}
+#menu li ul {
+    display: none;
+    position: absolute;
+    left:100px; /*aligns the dropdown to the horizontal tabs*/
+    top:inherit;
+}
+#menu li:hover ul, #menu li.over ul {
+    display: block;
+    padding: 0;
+}
+#menu li a:hover {
+    background:#F5EBCC;  /* url(shadow3.png) repeat-x top left;*/
+    color:#660066;
+}
+#menu li ul li {
+    height: 30px;
+    line-height: 30px;
+}

@@ -1,0 +1,22 @@
+<!-- This is the Member info row  -->
+<!-- This is the Member info row  -->
+<!-- This is the Member info row  -->
+ 	<tr>
+		<td colspan="1" width="400" bgcolor="#F1F1F9" align="right">
+			<font face="arial, helvetica" size="2">
+			<? echo $row_nbr ?>
+			<input type="radio" name="emailRadio[]" size="8" value="<? echo $emailKey ?>" /></font></td>
+		<td colspan="1" width="400" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2">
+			<input type="text" name="last" size="20" value="<? echo $last ?>" READONLY/></font></td>
+		<td colspan="1" width="400" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2">
+			<input type="text" name="first" size="20" value="<? echo $first ?>" READONLY/></font></td> 	
+		<td colspan="1" width="400" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2">
+<!--	    <a href="mailto:<? echo $email ?>"><? echo $email ?> </a>-->
+		<input type="url" name="email" size="30"  onclick="location.href='mailto:<? echo $email ?>'" value="<? echo $email ?>" READONLY/></font></td>	  
+		<td colspan="1" width="400" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2">
+			<input type="text" name="group" size="20" value="<? echo $group ?>" READONLY/></font></td> 	
+ </tr>
