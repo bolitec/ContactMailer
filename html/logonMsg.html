@@ -1,91 +1,67 @@
-<head><style type="text/css">
-<!-- ********************* -->
-<!-- Inline Menu Section   -->
-<!-- ********************* -->
-<!-- this first file csshover3.htc is used in IE to fix hover over functionality -->
-
-body {
-behavior:url(csshover.htc);
-font-size:100%;}
-
-ul
-{
-float:left;
-width:100%;
-padding:0;
-margin:0;
-list-style-type:none;
-}
-a
-{
-float:left;
-width:6em;
-text-decoration:none;
-color:white;
-background-color:purple;
-padding:0.2em 0.6em;
-border-right:1px solid white;
-}
-.button
-{
-float:right;
-width:6em;
-text-decoration:none;
-color:white;
-background-color:purple;
-padding:0em 0.0em;
-<!-- border-right:0px solid white; -->
-}
-a:hover {background-color:#ff3300}
-<!-- input[type="submit"]:hover {background-color:#ff3300} -->
-.button:hover {background-color:#ff3300}
-li {display:inline}
-
-</style></head>
-
+<!DOCTYPE html>
+<html>
+<head>
+<title>Logon Msg</title>
+<!-- ************************************************************************************ -->
+<!-- Logon Message page returns error or warning text   -->
+<!-- ************************************************************************************ -->
+<link rel="stylesheet" type="text/css" href="../html/css/MainStyle.css" media="screen, projection" />
+</head>
 <!-- if they are not logged in, Generate Form with input variables -->
-<body BACKGROUND="../images/desert-4.jpg" BGCOLOR="#FFFFFF" TEXT="#66066" LINK="#000080" VLINK="#000080" alink="#0000FF">
+<body>
+<div class="center">
 <form action="<?php echo $redirect ?>" method="post">
-<center>
-<table width="500" bgcolor="#660066" cellpadding="0" border="0" colspan="0" cellspacing="0">
+<table>
 	<tr>
 		<td bgcolor="#000080" colspan="2" align="center">
-			<img style="vertical-align: middle;" src="<? echo $hdr_image ?>" alt="Jesus Caritas Lay Fraternity"  height="100"></img></td></tr>
+			<img style="vertical-align: middle;" src="<? echo $hdr_image ?>" alt=""  height="100" />
+		</td></tr>
 	<tr>
-		<td width="500" colspan="2" align="center"><font face="arial,helvetica" size="2" color="WHITE"><b><?php echo $MsgTitle ?></b></td></tr></font> 
+		<td width="500" colspan="2" align="center">
+		<font face="arial,helvetica" size="2">
+		<b><?php echo $MsgTitle ?></b></font></td></tr>
 <!--  Remove for debug needs
 	<tr>
-		<td width="500" colspan="2" bgcolor="#F1F1F9" align="left"><font face="arial,helvetica" size="1" ><//?php echo $MsgType1 ?></td> -->
+		<td width="500" colspan="2" bgcolor="#F1F1F9" align="left">
+		<font face="arial,helvetica" size="1" ><//?php echo $MsgType1 ?></td> 
+-->
 	<tr>
-		<td width="500" colspan="2" bgcolor="#F1F1F9" align="left"><font face="arial,helvetica" size="2" ><?php echo $MsgType ?></td>
+		<td width="500" colspan="2" bgcolor="#F1F1F9" align="left">
+		<font face="arial,helvetica" size="2" >
+		<?php echo $MsgType ?></font></td></tr>
 	<tr>
-		<td width="500" colspan="2" bgcolor="#F1F1F9"><font face="arial,helvetica" size="1"><br></br></td>
+		<td width="500" colspan="2" bgcolor="#F1F1F9">
+		<font face="arial,helvetica" size="1"><br /></font></td></tr>
 	<tr>
-		<td width="500" colspan="2" bgcolor="#F1F1F9" align="center"><font face="arial,helvetica" size="2"><?php echo $Msg1 ?></td>
+		<td width="500" colspan="2" bgcolor="#F1F1F9" align="center">
+		<font face="arial,helvetica" size="2">
+		<?php echo $Msg1 ?></font></td></tr>
 	<tr>
-		<td width="500" colspan="2" bgcolor="#F1F1F9" align="center"><font face="arial,helvetica" size="2" ><?php echo $Msg2 ?></td>
+		<td width="500" colspan="2" bgcolor="#F1F1F9" align="center">
+		<font face="arial,helvetica" size="2" >
+		<?php echo $Msg2 ?></font></td></tr>
 	<tr>
-		<td width="250" bgcolor="#F1F1F9"><font face="arial,helvetica" size="1"><br></br></td>
+		<td width="250" bgcolor="#F1F1F9">
+		<font face="arial,helvetica" size="1"><br /></font></td></tr>
 	<tr>
-		<td width="555" colspan="1" bgcolor="#F1F1F9" align="left" ><font face="arial,helvetica" size="2">
+		<td width="555" colspan="1" bgcolor="#F1F1F9" align="center" >
 		<ul>
 			<!--  <li><a href="http://www.brothercharles.org/">NAmerica</a></li> -->
-		  	<li><a href="http://www.bolitec.org/">Bolitec</a></li>
+		  	<li><a href="http://www.bolitec.org/">Bolitech</a></li>
 		  	<li><a href="Help.php">Help</a></li>
-		    <li><a href="<?php echo $redirect ?>"><?php echo $button ?></a></li></td>
-<!--		<td width="500" bgcolor="#F1F1F9" align="right"><input type="submit" name="msg" value="<?php echo $button ?>"</td></tr>
-<!-- width='448' below 
+		    <li><a href="<?php echo $redirect ?>"><?php echo $button ?></a></li>
+		    <?php echo $button2 ?>
+		    </ul></td></tr>
 	<tr>
-		<td bgcolor="#000080" colspan="2" align="center">
-			<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="555" height="104" id="banner" align="middle">
-				<param name="allowScriptAccess" value="sameDomain" />
-				<param name="movie" value="/ClassAds/banner.swf" />
-				<param name="quality" value="high" />
-				<param name="bgcolor" value="#ffffff" />
-				<embed src="/ClassAds/banner.swf" quality="high" bgcolor="#ffffff" width="555" height="104" name="banner" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
-			</object></td></tr>	  -->	
+		<td width="555" colspan="2" align="center">
+			<font face="arial,helvetica" size="1"><br />
+			logonMsg.html</font></td></tr>
 	<tr>
-		<td width="555" colspan="2" align="center"><font face="arial,helvetica" size="1" color="WHITE"><b>Bolitech.com 2008-<?php echo date("Y") ?></b></td></tr></font> 
-		<td width="555" colspan="2" align="center"><font face="arial,helvetica" size="1" color="WHITE"><b>logonMsg.html</b></td></tr></font> 
+		<td width="555" colspan="2" align="center">
+		<font face="arial,helvetica" size="1">
+		<?php echo ($brand." ".date("Y")) ?></font></td></tr>
 </table> 
-</form></center>
+</form>
+</div>
+</body>
+</html>

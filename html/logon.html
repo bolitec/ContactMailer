@@ -1,101 +1,70 @@
+<!DOCTYPE html>
+<html>
 <head>
 <title>LogonPage</title>
-<style type="text/css">
-<!-- ********************* -->
-<!-- Inline Menu Section   -->
-<!-- ********************* -->
-<!-- this first file csshover.htc is used in IE to fix hover over functionality -->
-
-body {
-behavior:url(csshover.htc);
-font-size:100%;}
-
-ul
-{
-float:left;
-width:100%;
-padding:0;
-margin:0;
-list-style-type:none;
-}
-a
-{
-float:left;
-width:6em;
-text-decoration:none;
-color:white;
-background-color:purple;
-padding:0.2em 0.6em;
-border-right:1px solid white;
-}
-.button
-{
-float:right;
-width:6em;
-text-decoration:none;
-color:white;
-background-color:purple;
-padding:0em 0.0em;
-<!-- border-right:0px solid white; -->
-}
-a:hover {background-color:#ff3300}
-input[type="submit"]:hover {background-color:#e6fdc9}
-.button:hover {background-color:#33ff00}
-li {display:inline}
-
-</style></head>
+<!-- ************************************************************************************ -->
+<!-- Logon Page is the default Member page where one can logon or register for services   -->
+<!-- ************************************************************************************ -->
+<link rel="stylesheet" type="text/css" href="../html/css/MainStyle.css" media="screen, projection" />
+</head>
 
 <!-- if they are not logged in, Generate Form with input variables -->
-<html>
-<body BACKGROUND="../images/desert-4.jpg" BGCOLOR="#FFFFFF" TEXT="#66066" LINK="#000080" VLINK="#000080" alink="#0000FF">
+<body>
+<div class="center">
 <form name="Logon" action="<?php echo $_SERVER['PHP_SELF']?>" method="post"> 
-<center>
-<table width="500" bgcolor="#660066" cellpadding="0" border="0" colspan="0" cellspacing="0">
+<table >
 	<tr>
 		<td bgcolor="#000080" colspan="2" align="center">
-			<img style="vertical-align: middle;" src="<? echo $hdr_image ?>" alt="Caritas" height="100"></img></td></tr>
+			<img style="vertical-align: middle;" src="<? echo $hdr_image ?>" alt="" height="100" /></td></tr>
 	<tr>
-		<td width="555" colspan="2" align="center"><font face="arial,helvetica" size="2" color="WHITE"><b>Logon Page</b></td></tr></font> 
+		<td width="555" colspan="2" align="center">
+		<font face="arial,helvetica" size="2">
+		<b>Logon Page</b></font></td></tr>
 	<tr>
-		<td width="555" colspan="2" bgcolor="#F1F1F9"><font face="arial,helvetica" size="1"><br></br></td>
+		<td width="555" colspan="2" bgcolor="#F1F1F9">
+		<font face="arial,helvetica" size="1"><br /></font></td></tr>
 	<tr>
-		<td width="455" bgcolor="#F1F1F9" align="right"><font face="arial,helvetica" size="2">Email:
-			<input type="text" name="email" maxlength="32" size="40"></td>
+		<td width="455" bgcolor="#F1F1F9" align="right">
+		<font face="arial,helvetica" size="2">
+		Email:
+		<input type="text" name="email" maxlength="32" size="40"></font></td>
 		<td width="100" bgcolor="#F1F1F9" align="left">*</td></tr> 
 	<tr>
-		<td width="455" bgcolor="#F1F1F9" align="right"><font face="arial,helvetica" size="2">Password:
-			<input type="password" name="pass" maxlength="12" size="40"></td>
+		<td width="455" bgcolor="#F1F1F9" align="right">
+		<font face="arial,helvetica" size="2">
+		Password:
+		<input type="password" name="pass" maxlength="12" size="40"></font></td>
 		<td width="100"  bgcolor="#F1F1F9" align="left">*</td></tr>
 	<tr>
-		<td width="400" bgcolor="#F1F1F9" align="right"><font face="arial,helvetica" size="1">
-			<input type="submit" name="logon" value="Logon" /></td>
+		<td width="400" bgcolor="#F1F1F9" align="right">
+		<font face="arial,helvetica" size="1">
+		<input type="submit" name="logon" value="Logon" /></font></td>
 		<td width="155" bgcolor="#F1F1F9" align="left"></td></tr>
-</form>
 	<tr>
-		<td width="500" colspan="2" bgcolor="#F1F1F9" align="center"><font face="arial,helvetica" size="2"><i><br>New Member? To Register click below</br></i></td>
+		<td width="500" colspan="2" bgcolor="#F1F1F9" align="center">
+		<font face="arial,helvetica" size="2"><br />
+		<i>New Member? To Register click below</i></font></td></tr>
 	<tr>
-		<td width="500" colspan="2" bgcolor="#F1F1F9" align="center"><font face="arial,helvetica" size="1"><br></br></td>
+		<td width="500" colspan="2" bgcolor="#F1F1F9" align="center">
+		<font face="arial,helvetica" size="1"><br /></font></td></tr>
 	<tr>
-		<td width="555" colspan="2" bgcolor="#F1F1F9" align="left" ><font face="arial,helvetica" size="2">
+		<td width="555" colspan="2" bgcolor="#F1F1F9" align="center">
 		<ul>
 			<!--  <li><a href="http://www.brothercharles.org/">NAmerica</a></li> -->
-		    <li><a href="http://www.bolitec.org/">Bolitec</a></li>
+		    <li><a href="http://www.bolitec.org/">Bolitech</a></li>
 		    <li><a href="Register.php">Register</a></li>
-		</ul></td></tr>
-<!-- width='448' below 
+		</ul>
+		</td></tr>
+			
 	<tr>
-		<td bgcolor="#000080" colspan="2" align="center">
-			<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="400" height="94" id="banner" align="middle">
-				<param name="allowScriptAccess" value="sameDomain" />
-				<param name="movie" value="/ClassAds/banner.swf" />
-				<param name="quality" value="high" />
-				<param name="bgcolor" value="#ffffff" />
-				<embed src="/ClassAds/banner.swf" quality="high" bgcolor="#ffffff" width="400" height="94" name="banner" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
-			</object>
-			</td></tr>-->
+		<td width="555" colspan="2" align="center">
+		<font face="arial" size="1"><br />
+		logon.html</font></td></tr>
 	<tr>
-		<td width="555" colspan="2" align="center"><font face="arial,helvetica" size="1" color="WHITE"><b>Bolitech.com 2008-<?php echo date("Y") ?></b></td></tr></font> 
-		<td width="555" colspan="2" align="center"><font face="arial,helvetica" size="1" color="WHITE"><b>logon.html</b></td></tr></font> 
+		<td width="555" colspan="2" align="center">
+		<font face="arial" size="1">
+		<?php echo ($brand." ".date("Y")) ?></font></td></tr>
 </table> 
-</center>
+</form>
+</div>
 </html>

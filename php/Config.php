@@ -14,8 +14,9 @@ $secured_php = "/home/bolitest/php/ContactMailer/";
 
 // reply email address on the regemail header
 // regmail Jesus Caritas Lay Fraternity title
-$regemailaddr = "sales@bolitech.com";
+$regemailaddr = "support@bolitech.com";
 $regemailtitle = "Contact Mailer Web App";
+$brand = "BOLITECH";
 
 #######################################################
 /* optional configuration options */

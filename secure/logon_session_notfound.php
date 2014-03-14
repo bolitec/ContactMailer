@@ -68,8 +68,9 @@
 			$MsgType1 = "logon_session_notfound.php";
 			$MsgType2 = "Logon.php Warning:";
 			$Msg1 = "Password does not match database,";
-			$Msg2= "please try again.  Or <a class=ahref href=".$url_secure_php."ResetPassEmail.php?email=".$email.">Reset Password</a>";
+			$Msg2= "please try again by clicking Back. Or request a password Reset email below.</a>";
 			$button = "Back";
+			$button2 = "<li><a href=".$url_secure_php."ResetPassEmail.php?email=".$email.">Reset</a></li>";
 			include $html_files.'logonMsg.html';
 			unset($_POST['logon']);
 			exit();
