@@ -1,0 +1,173 @@
+<head> 
+<title>Member Search</title> 
+<style type="text/css">
+<!-- ********************* -->
+<!-- Inline Menu Section   -->
+<!-- ********************* -->
+<!-- this first file csshover.htc is used in IE to fix hover over functionality -->
+
+body {
+behavior:url(../html/csshover.htc);
+font-size:100%;}
+
+ul
+{
+float:left;
+width:100%;
+padding:0;
+margin:0;
+list-style-type:none;
+}
+a
+{
+float:left;
+width:6em;
+text-decoration:none;
+color:white;
+background-color:purple;
+padding:0.2em 0.6em;
+border-right:1px solid white;
+}
+.button
+{
+float:right;
+width:6em;
+text-decoration:none;
+color:white;
+background-color:purple;
+padding:0em 0.0em;
+<!-- border-right:0px solid white; -->
+}
+a:hover {background-color:#ff3300}
+input[type="submit"]:hover {background-color:#e6fdc9}
+.button:hover {background-color:#33ff00}
+li {display:inline}
+
+</style></head>
+
+
+<html>
+
+<body BACKGROUND="../images/desert-4.jpg" BGCOLOR="#FFFFFF" TEXT="#66066" LINK="#000080" VLINK="#000080" alink="#0000FF">
+
+<center>
+
+<form name="searchForm" action="<?php echo $redirect ?>" method="post"> 
+
+<table width="600" bgcolor="#660066" cellpadding="0" border="0" colspan="0" cellspacing="0">
+	<tr>
+		<td bgcolor="#000080" colspan="2" align="center">
+			<img style="vertical-align: middle;" src="<? echo $hdr_image ?>" alt="Caritas" width="596"></img></td></tr>
+	<tr>
+		<td width="500" colspan="2" align="center"><font face="arial,helvetica" size="2" color="WHITE"><b><?php echo $MsgTitle ?></b></td></tr></font> 
+	<tr>
+		<td width="500" colspan="2" bgcolor="#F1F1F9" align="right"><font face="arial,helvetica" size="1" ><?php echo $MsgType1 ?></td>
+	<tr>
+		<td width="500" colspan="2" bgcolor="#F1F1F9" align="left"><font face="arial,helvetica" size="2" ><?php echo $MsgType2 ?></td>
+	<tr>
+		<td width="500" colspan="2" bgcolor="#F1F1F9"><font face="arial,helvetica" size="1"><br></br></td>
+	<tr>
+		<td width="500" colspan="2" bgcolor="#F1F1F9" align="CENTER"><font face="arial,helvetica" size="2"><?php echo $Msg1 ?></td>
+	<tr>
+		<td width="500" colspan="2" bgcolor="#F1F1F9" align="CENTER"><font face="arial,helvetica" size="2" ><?php echo $Msg2 ?></td>
+	<tr>
+		<td width="500" colspan="2" bgcolor="#F1F1F9"><font face="arial,helvetica" size="1"><br></br></td>
+
+<!-- This is the Member's Name  -->
+<!-- This is the Member's Name  -->
+<!-- This is the Member's Name  -->
+ 	<tr>
+		<td colspan="1" width="400" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2">
+			Member Last Name: </td>
+		<td colspan="1" width="400" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2">
+			Member First Name: </td></tr>
+ 	<tr>
+		<td colspan="1" width="400" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2">
+			<input type="text" name="last" size="30" value="<? echo $last ?>" /></td>
+		<td colspan="1" width="400" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2">
+			<input type="text" name="first" size="30" value="<? echo $first ?>" /></td></tr>
+ 	<tr>
+		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2"><br /></td></tr>
+
+<!-- This is the Member's Email  -->
+<!-- This is the Member's Email  -->
+<!-- This is the Member's Email  -->
+ 	<tr>
+		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2">
+		Member Email: </td></tr>
+ 	<tr>
+		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2">
+			<input type="text" name="email" size="50" maxlength="50" value="<? echo $email ?>" /></td></tr>
+ 	<tr>
+		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2"><br /></td></tr>
+
+<!-- This is the email group to search -->
+<!-- This is the email group to search -->
+<!-- This is the email group to search -->
+ 	<tr>
+		<td colspan="1" width="200" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2">
+			Member Group: </td>
+		<td colspan="1" width="200" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2"></td></tr>
+
+	<tr>
+		<td colspan="1" width="100" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2">
+			<SELECT NAME="group" size="1" VALUE="<? echo $group ?>">
+			<? foreach($grpOptions as $grp)
+			{
+				if ($group==$grp)
+				{
+					echo "<option SELECTED>$grp</option> \n" ;
+				}
+				else
+				{ 
+					echo "<option>$grp</option> \n";
+				}
+			}
+			?>
+			</SELECT></td>
+
+<!-- This is the select approximate search button -->
+<!-- This is the select approximate search button -->
+<!-- This is the select approximate search button -->
+		<td colspan="1" width="300" bgcolor="#F1F1F9" align="left">
+			<font face="arial, helvetica" size="2">
+    Approx. Search: 
+  <input type="checkbox" name="approx" value="Yes"/> Yes
+  <input type="radio" name="level" value="1"/>%
+  <input type="radio" name="level" value="2"/>%%</td></tr>
+    
+	<tr>
+		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2"><br /></td></tr>
+	<tr>
+		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2">
+ 			<input type="submit" name="searchForm" value='Search' /></td></tr>
+</form>
+
+<!-- Buttons defined for View, Post, and Renew funcionality -->
+	<tr>
+		<td width="500" colspan="2" align="left" bgcolor="#F1F1F9"><font face="arial,helvetica" size="2">
+		<ul>
+<!--		<li><a href="http://www.brothercharles.org/">NAmerica</a></li>
+		<li><a href="http://www.brothercharlesofjesus.org">Boston</a></li>  -->
+		<li><a href="Member.php">Admin</a></li>
+		<li><a href="EmailAdmin.php">Add Email</a></li>
+		<li><a href="Logout.php">Logout</a></li>
+		</ul>
+	<tr>
+		<td width="555" colspan="2" align="center"><font face="arial,helvetica" size="1" color="WHITE"><b>Bolitech.com 2008-<?php echo date("Y") ?></b></td></tr></font> 
+		<td width="555" colspan="2" align="center"><font face="arial,helvetica" size="1" color="WHITE"><b>searchMember.html</b></td></tr></font> 
+</table>
+</center></html>

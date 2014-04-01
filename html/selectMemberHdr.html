@@ -1,0 +1,95 @@
+<head> 
+<title>Member Select</title> 
+<style type="text/css">
+<!-- ********************* -->
+<!-- Inline Menu Section   -->
+<!-- ********************* -->
+<!-- this first file csshover.htc is used in IE to fix hover over functionality -->
+
+body {
+behavior:url(https://secure.bolitech.com/caritas/html/csshover.htc);
+font-size:100%;}
+
+ul
+{
+float:left;
+width:100%;
+padding:0;
+margin:0;
+list-style-type:none;
+}
+a
+{
+float:left;
+width:6em;
+text-decoration:none;
+color:white;
+background-color:purple;
+padding:0.2em 0.6em;
+border-right:1px solid white;
+}
+.button
+{
+float:right;
+width:6em;
+text-decoration:none;
+color:white;
+background-color:purple;
+padding:0em 0.0em;
+<!-- border-right:0px solid white; -->
+}
+a:hover {background-color:#ff3300}
+input[type="submit"]:hover {background-color:#e6fdc9}
+.button:hover {background-color:#33ff00}
+li {display:inline}
+
+</style></head>
+
+
+<html>
+
+<body BACKGROUND="../images/desert-4.jpg" BGCOLOR="#FFFFFF" TEXT="#66066" LINK="#000080" VLINK="#000080" alink="#0000FF">
+
+<center>
+
+<form name="getMember" action="<?php echo $redirect ?>" method="post"> 
+
+<table width="800" bgcolor="#660066" cellpadding="0" border="0" colspan="0" cellspacing="0">
+	<tr>
+		<td bgcolor="#000080" colspan="5" align="center">
+			<img style="vertical-align: middle;" src="<? echo $hdr_image ?>" alt="Caritas" width="795"></img></td></tr>
+	<tr>
+		<td width="800" colspan="5" align="center"><font face="arial,helvetica" size="2" color="WHITE"><b><?php echo $MsgTitle ?></b></td></tr></font> 
+	<tr>
+		<td width="800" colspan="5" bgcolor="#F1F1F9" align="right"><font face="arial,helvetica" size="1" ><?php echo $MsgType1 ?></td></tr>
+	<tr>
+		<td width="800" colspan="5" bgcolor="#F1F1F9" align="left"><font face="arial,helvetica" size="2" ><?php echo $MsgType2 ?></td></tr>
+	<tr>
+		<td width="800" colspan="5" bgcolor="#F1F1F9"><font face="arial,helvetica" size="1"><br></br></td>
+	<tr>
+		<td width="800" colspan="5" bgcolor="#F1F1F9" align="CENTER"><font face="arial,helvetica" size="2"><?php echo $Msg1 ?></td></tr>
+	<tr>
+		<td width="800" colspan="5" bgcolor="#F1F1F9" align="CENTER"><font face="arial,helvetica" size="2" ><?php echo $Msg2 ?></td></tr>
+	<tr>
+		<td width="800" colspan="5" bgcolor="#F1F1F9"><font face="arial,helvetica" size="1"><br></br></td></tr>
+
+<!-- This is the label row      -->
+<!-- This is the label row      -->
+<!-- This is the label row      -->
+ 	<tr>
+		<td colspan="1" width="150" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2">
+			Select: </td>
+		<td colspan="1" width="150" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2">
+			Last Name: </td>
+		<td colspan="1" width="150" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2">
+			First Name: </td>
+		<td colspan="1" width="150" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2">
+			Email: </td>
+		<td colspan="1" width="150" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2">
+			Group: </td>
+	</tr>

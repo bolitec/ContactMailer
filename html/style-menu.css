@@ -1,0 +1,35 @@
+@CHARSET "ISO-8859-1";
+nav, ul, li, label {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+nav ul {
+    list-style: none;
+}
+.sideMenu {
+    font-size: 1em;
+}
+.sideMenu ul {
+    overflow:hidden;
+}
+.sideMenu > ul ul {
+    margin-left: 20px;
+}
+.sideMenu li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.sideMenu li:nth-of-type(0) {
+    margin-top: 0px;
+}
+.sideMenu input[type='radio'], .sideMenu input[type='checkbox'] {
+    display: none;
+}
+.sideMenu input[type='radio'] + ul, .sideMenu input[type='checkbox'] + ul {
+    position: relative;
+    display: none;
+}
+.sideMenu input[type='radio']:checked + ul, .sideMenu input[type='checkbox']:checked + ul {
+    display: block;
+}
