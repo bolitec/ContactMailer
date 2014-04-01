@@ -112,7 +112,7 @@
     		                               union  distinct
     		                               select vchEmail,'','','' from ".$tbl_name." where '$approx'='Yes'
     		                               union  distinct
-    		                               SELECT vchEmail, vchFirstName, vchLastName, vchGroup FROM ".$tbl_name2." ".$where_clause2." order by 3,1")
+    		                               SELECT vchEmail, vchFirstName, vchLastName, vchGroup FROM ".$tbl_name2." ".$where_clause2." order by 3")
 								or die('-SearchMember.php (SearchMember select of Emails table failed)- '.mysqli_error().'');
 	  	  	$row_nbr = 0;
 			while($FoundMember = mysqli_fetch_array( $SearchMember )) 

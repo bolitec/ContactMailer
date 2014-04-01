@@ -7,7 +7,7 @@
 		if ($check3 == 0)
 		{
 			if(!mysqli_query($link,"insert into ".$tbl_name2." values
-				(0,'$sessionEmail','$first','$last','$addr1','$addr2','$addr3','$city','$state','$phone','','',0,'$country',0,'','A1','','','','','')")) 
+				(0,'$sessionEmail','$first','$last','$addr1','$addr2','$addr3','$city','$state','$phone','','',0,'$country',0,'','','','','','','')")) 
 			{
         $msg1 = "The following error and error# were returned";
 				if (mysqli_errno() == 1062)
