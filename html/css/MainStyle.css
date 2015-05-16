@@ -1,0 +1,69 @@
+@CHARSET "UTF-8";
+ul
+{
+float:left;
+width:100%;
+padding:0;
+margin:0;
+list-style-type:none;
+}
+li {
+	display:inline;
+	font-family:arial,helvetica;
+	font-size:small;
+}
+a:link {
+	float:left;
+	width:6em;
+	text-decoration:none;
+	color:white;
+	background-color:purple;
+	padding:0.2em 0.6em;
+	border-right:1px solid white;
+}
+a:visited{
+	color:#000080;
+}
+a:hover {
+	background-color:#ff3300
+}
+a:active{
+	color:#0000FF;
+}
+.button {
+	float:right;
+	width:6em;
+	text-decoration:none;
+	color:white;
+	background-color:purple;
+	padding:0em 0.0em;
+/*<!-- border-right:0px solid white; -->*/
+}
+input[type="submit"]:hover {
+	background-color:#e6fdc9
+}
+.button:hover {
+	background-color:#33ff00
+}
+.center{
+	margin:auto;
+	width:500px;
+	background-color:#F1F1F9;
+}
+table
+{
+border-collapse:collapse;
+}
+table, td, th
+{
+border:0;
+/* text-align:center;*/
+}
+body {
+	font-size:100%;
+	background-image:url("../../images/desert-4.jpg");
+	background-color:#FFFFFF;
+	color:#660066;
+	margin:0;
+	padding:0;	 
+}
