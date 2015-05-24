@@ -26,32 +26,31 @@
 			// session_write_close();
 			// echo ('-Member.php- Session found: '.$_SESSION['Email'].' PASS: '.$_SESSION['Password'].'');
 			// echo ('logonName: '.$_SESSION['LogonName']."\n"); 
-			If (empty($sessionName))
-			{
-				$MsgType2 = " Welcome ".$sessionEmail.";";
-			}
-			else
-			{
+			If (isset($_SESSION['LogonName'])){
 				$MsgType2 = " Welcome ".$sessionName.";";
+			} else {
+				If (isset($_SESSION['Email'])){
+				$MsgType2 = " Welcome ".$sessionEmail.";";
+				}
 			}
-	    if (isset($_SESSION['Admin']))
-    	{
+		    if (isset($_SESSION['Admin']))
+	    	{
  				// For admin logon we display admin member menu
 				$MsgTitle = "Member Administrator Page";
 				$redirect = $url_secure_php."Member.php";
 				$MsgType1 = "????.php>>member_session_found.php";
 				// $MsgType2 = "Welcome back, ".$logonName.";";
-				$Msg1 = "Welcome to the Jesus Caritas Lay Fraternity of North America";
-				$Msg2= "You are a registered (admin) member of the Charles de Foucauld Fraternity!";
+				$Msg1 = "Welcome to the ".TITLE;
+				$Msg2= "You are a registered (admin) member of the ".TITLE;
 				include $html_files.'admin.html';
-		  }
-			else
-		  {
-				$MsgTitle = "Jesus Caritas Lay Fraternity - Charles de Foucauld";
+			  }
+				else
+			  {
+				$MsgTitle = TITLE;
 				$Msg1 = "To modify your profile information or be removed from our mailing list";
-				$Msg2= "please select MyProfile below";
+				$Msg2= "please select MyProfile below.";
 				include $html_files.'member.html';
-		  }
+		  	}
 			exit();
 		} 
 	} 

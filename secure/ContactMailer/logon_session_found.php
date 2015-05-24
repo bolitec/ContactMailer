@@ -32,8 +32,8 @@
 				$redirect = $url_secure_php."Member.php";
 				$MsgType1 = "Logon.php>>logon_session_notfound.php";
 				$MsgType2 = "Welcome back, ".$logonName.";";
-				$Msg1 = "Welcome to the Jesus Caritas Lay Fraternity of North America";
-				$Msg2= "You are a registered (admin) member of the Charles de Foucauld Fraternity!";
+				$Msg1 = "Welcome to the ".TITLE;
+				$Msg2= "You are a registered (admin) member of the ".TITLE."!";
 				include $html_files.'admin.html';
 		  }
 			else
@@ -42,8 +42,8 @@
 				$MsgTitle = "Jesus Caritas Lay Fraternity of North America";
 				$redirect = "MyProfile.php";
 				$MsgType = "Welcome back, ".$logonName.";";
-				$Msg1 = "Welcome to the Jesus Caritas Lay Fraternity of North America";
-				$Msg2= "You are a registered member of the Charles de Foucauld Fraternity!";
+				$Msg1 = "Welcome to the ".TITLE;
+				$Msg2= "You are a registered member of the ".TITLE."!";
 				// include $php_files.'Member.php';
 				include $html_files.'member.html';
 		  }
