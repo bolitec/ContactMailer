@@ -109,9 +109,9 @@
 			  $Msg2 = $where_clause;
 			  include $html_files.'selectMemberHdr.html';
     		$SearchMember = mysqli_query($link, "SELECT email_1, first_name, last_name, grp_name FROM ".$tbl_name3." ".$where_clause."
-    		                               union  distinct
+    		                               union   distinct
     		                               select vchEmail,'','','' from ".$tbl_name." where '$approx'='Yes'
-    		                               union  distinct
+    		                               union   distinct
     		                               SELECT vchEmail, vchFirstName, vchLastName, vchGroup FROM ".$tbl_name2." ".$where_clause2." order by 3")
 								or die('-SearchMember.php (SearchMember select of Emails table failed)- '.mysqli_error().'');
 	  	  	$row_nbr = 0;

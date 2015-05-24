@@ -65,7 +65,7 @@ if ($p != NULL){
 			break;
 	}
 } else {
-	$msg = "Welcome to the Help pages for Contact Mailer Web App.  On the test systems all members are Admin once they create a membership and re-establish Logon";
+	$msg = "Welcome to the Help pages for Contact Mailer Web App.  Contact the webmaster to set administrative rights for users.<a href='mailto:webmaster@bolitech.com'>webmaster</a> ";
 	$page = '../images/AdminPage(Welcome).PNG';
 }
 

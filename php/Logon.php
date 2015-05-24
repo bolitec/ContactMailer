@@ -33,6 +33,9 @@ else
 // Included in the handler override is a session_start() and concludes below with a commit of the DB session. 
 // Reference details related to handler functions in SessionHandler.php'; 
 
+	if(isset($_SESSION['RegEmail'])){
+  		$reg_email = $_SESSION['RegEmail'];
+  	}
 	include $html_files.'logon.html';
 	exit();
 }
