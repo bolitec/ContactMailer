@@ -1,4 +1,4 @@
-<?
+<?php
 //Load the file from a specific location for now.  Later this will be a dynamic select
 // Check to make sure we have an HTML file 
 if ( !$_FILES['html_file']['name'] )
@@ -33,10 +33,10 @@ if ( !($html_file = file_get_contents($_FILES['html_file']['tmp_name'])) )
 //Check whether the form has been submitted
 if (array_key_exists('check_submit', $_POST)) 
 {
-  // Mail_Mime PEAR functions used in emailer scripts
-  include 'Mail.php';
-  include 'Mail/mime.php';
-  $crlf = "\r\n";
+	// Mail_Mime PEAR functions used in emailer scripts
+	include 'Mail.php';
+	include 'Mail/mime.php';
+	$crlf = "\r\n";
 
 	//Converts the new line characters (\n) in the text area into HTML line breaks (the <br /> tag)
 	$_POST['Comments'] = nl2br($_POST['Comments']); 
@@ -46,7 +46,7 @@ if (array_key_exists('check_submit', $_POST))
 	$_POST['Name'] = STRIPSLASHES($_POST['Name']); 
 	$_POST['Subject'] = STRIPSLASHES($_POST['Subject']); 
 
-  // comments from form to variable
+	// comments from form to variable
 	$comments = $_POST['Comments'];
 	
 	// $subject = 'ExportFile'; 
@@ -59,28 +59,28 @@ if (array_key_exists('check_submit', $_POST))
 	//define the headers we want passed. Note that they are separated with \r\n 
 	$sEmail = $_POST['Semail'];
 	
-  //  Build the headers , body and send email.
+	//  Build the headers , body and send email.
 	$hdrs = array( 'From' => $sEmail, 'Subject' => $subject);
 
-  // Load the body, attachment and headers before sending email
-  $mime = new Mail_mime($crlf);
+	// Load the body, attachment and headers before sending email
+	$mime = new Mail_mime($crlf);
 
-  // Load txt and html body content
-  $text = $comments;
-  $text = $text.strip_tags($html_file);
-  $mime->setTXTBody($text);
-  $html = "<html><body><p>".$comments."</p></body></html>";
-  $html = $html.$html_file;
-  $mime->setHTMLBody($html);
+	// Load txt and html body content
+	$text = $comments;
+	$text = $text.strip_tags($html_file);
+	$mime->setTXTBody($text);
+	$html = "<html><body><p>".$comments."</p></body></html>";
+	$html = $html.$html_file;
+	$mime->setHTMLBody($html);
 
 	//Prepare parameters for Attachment function
-  //$mime->addAttachment($pdf_file, $content_type, $file_name, 0);
+	//$mime->addAttachment($pdf_file, $content_type, $file_name, 0);
                
-  //do not try to call these lines in reverse order
-  $body = $mime->get();
-  $hdrs = $mime->headers($hdrs);
+	//do not try to call these lines in reverse order
+	$body = $mime->get();
+	$hdrs = $mime->headers($hdrs);
 
-  $mail =& Mail::factory('mail','-f '.$sEmail);
+	$mail =& Mail::factory('mail','-f '.$sEmail);
  
 	// Run select query to send mass mail to all or some members in the JCLM Emails table.
 	include $secured_php.'jclm-email-qry-01.php';

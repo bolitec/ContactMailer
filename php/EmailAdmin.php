@@ -1,6 +1,6 @@
 <?php
 //  Local config allows for dynamic definition of file paths and single point for private paths
-include "Config.php";
+include "Config_severus.php";
 
 // Sets path for files and start session.
 require PRIVATE_SESSION."sessionConfig.php";

@@ -1,6 +1,6 @@
 <?
 //  Local config allows for dynamic definition of file paths and single point for private paths
-include "../php/Config.php";
+include "../php/Config_severus.php";
 
 // Connects to member table of contact_mailer Database 
 //  Include the db connection script from non public_html location

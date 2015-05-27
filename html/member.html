@@ -1,89 +1,67 @@
-<head><style type="text/css">
-<!-- ********************* -->
-<!-- Inline Menu Section   -->
-<!-- ********************* -->
-<!-- this first file csshover3.htc is used in IE to fix hover over functionality -->
-
-body {
-behavior:url(csshover.htc);
-font-size:100%;}
-
-ul
-{
-float:left;
-width:100%;
-padding:0;
-margin:0;
-list-style-type:none;
-}
-a
-{
-float:left;
-width:6em;
-text-decoration:none;
-color:white;
-background-color:purple;
-padding:0.2em 0.6em;
-border-right:1px solid white;
-}
-.button
-{
-float:right;
-width:6em;
-text-decoration:none;
-color:white;
-background-color:purple;
-padding:0em 0.0em;
-<!-- border-right:0px solid white; -->
-}
-a:hover {background-color:#ff3300}
-<!-- input[type="submit"]:hover {background-color:#e6fdc9} -->
-.button:hover {background-color:#ff3300}
-li {display:inline}
-
-</style></head>
-
+<!DOCTYPE html>
 <html>
+<head>
+<title>MemberPage</title>
+<!-- ************************************************************************************ -->
+<!-- Logon Page is the default Member page where one can logon or register for services   -->
+<!-- ************************************************************************************ -->
+<link rel="stylesheet" type="text/css" href="../html/css/MainStyle.css" media="screen, projection" />
+</head>
 
-<body BACKGROUND="../images/desert-4.jpg" BGCOLOR="#FFFFFF" TEXT="#66066" LINK="#000080" VLINK="#000080" alink="#0000FF">
-
-<center>
-
-<form name="member" action="<?php echo $redirect ?>" method="post"> 
-
-<table width="500" bgcolor="#660066" cellpadding="0" border="0" colspan="0" cellspacing="0">
+<!-- if they are not logged in, Generate Form with input variables -->
+<body>
+<div class="center">
+<form name="Logon" action="<?php echo $_SERVER['PHP_SELF']?>" method="post"> 
+<table >
 	<tr>
 		<td bgcolor="#000080" colspan="2" align="center">
-			<img style="vertical-align: middle;" src="<? echo $hdr_image ?>" alt="Caritas" height="100"></img></td></tr>
+			<img style="vertical-align: middle;" src="<? echo $hdr_image ?>" alt="" height="100" /></td></tr>
 	<tr>
-		<td width="500" colspan="2" align="center"><font face="arial,helvetica" size="2" color="WHITE"><b><?php echo $MsgTitle ?></b></td></tr></font> 
+		<td width="500" colspan="2" align="center">
+		<font face="arial,helvetica" size="2" ><b>
+		<?php echo $MsgTitle ?></b></font></td></tr> 
 <!-- remove for debug
 	<tr>
-		<td width="500" colspan="2" bgcolor="#F1F1F9" align="right"><font face="arial,helvetica" size="1" ><// ?php echo $MsgType1 ?>>>member.html</td> -->
+		<td width="500" colspan="2" bgcolor="#F1F1F9" align="right"><font face="arial,helvetica" size="1" >
+		<// ?php echo $MsgType1 ?>>>member.html</td></tr> -->
 	<tr>
-		<td width="500" colspan="2" bgcolor="#F1F1F9" align="left"><font face="arial,helvetica" size="2" ><?php echo $MsgType2 ?></td>
+		<td width="500" colspan="2" bgcolor="#F1F1F9" align="left">
+		<font face="arial,helvetica" size="2" >
+		<?php echo $MsgType2 ?></font></td></tr>
 	<tr>
-		<td width="500" colspan="2" bgcolor="#F1F1F9"><font face="arial,helvetica" size="1"><br></br></td>
+		<td width="500" colspan="2" bgcolor="#F1F1F9">
+		<font face="arial,helvetica" size="1"></font></td></tr>
 	<tr>
-		<td width="500" colspan="2" bgcolor="#F1F1F9" align="CENTER"><font face="arial,helvetica" size="2"><?php echo $Msg1 ?></td>
+		<td width="500" colspan="2" bgcolor="#F1F1F9" align="CENTER">
+		<font face="arial,helvetica" size="2">
+		<?php echo $Msg1 ?></font></td></tr>
 	<tr>
-		<td width="500" colspan="2" bgcolor="#F1F1F9" align="CENTER"><font face="arial,helvetica" size="2" ><?php echo $Msg2 ?></td>
+		<td width="500" colspan="2" bgcolor="#F1F1F9" align="CENTER">
+		<font face="arial,helvetica" size="2" >
+		<?php echo $Msg2 ?></font></td></tr>
 	<tr>
-		<td width="500" colspan="2" bgcolor="#F1F1F9"><font face="arial,helvetica" size="1"><br></br></td>
+		<td width="500" colspan="2" bgcolor="#F1F1F9">
+		<font face="arial,helvetica" size="1"></font></td></tr>
 
 <!-- Buttons defined for View, Post, and Renew funcionality -->
 	<tr>
-		<td width="500" colspan="2" align="left" bgcolor="#F1F1F9"><font face="arial,helvetica" size="2">
+		<td width="500" colspan="2" align="left" bgcolor="#F1F1F9">
 		<ul>
-		<!--  <li><a href="http://www.brothercharles.org/">NAmerica</a></li>
-		<li><a href="http://www.brothercharlesofjesus.org">Boston</a></li> -->
-		<li><a href="MyProfile.php">MyProfile</a></li>
-		<li><a href="../html/Help.html">Help</a></li>
-		<li><a href="Logout.php">Logout</a></li>
-		</ul>
+			<li><a href="MyProfile.php">MyProfile</a></li>
+			<li><a href="Help.php">Help</a></li>
+			<li><a href="Logout.php">Logout</a></li>
+		    <!--  <li><a href="<?php echo $redirect ?>"><?php echo $button ?></a></li>
+		    <?php echo $button2 ?> -->
+		</ul></td></tr>
 	<tr>
-		<td width="555" colspan="2" align="center"><font face="arial,helvetica" size="1" color="WHITE"><b>Bolitech.com 2008-<?php echo date("Y") ?></b></td></tr></font> 
-		<td width="555" colspan="2" align="center"><font face="arial,helvetica" size="1" color="WHITE"><b>member.html</b></td></tr></font> 
-</table>
+		<td width="555" colspan="2" align="center">
+			<font face="arial,helvetica" size="1"><br />
+			member.html</font></td></tr>
+	<tr>
+		<td width="555" colspan="2" align="center">
+		<font face="arial,helvetica" size="1">
+		<?php echo ($brand." ".date("Y")) ?></font></td></tr>
+</table> 
 </form>
-</center></html>
+</div>
+</html>
