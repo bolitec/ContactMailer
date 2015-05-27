@@ -4,7 +4,8 @@
 //  If there is no session, it allows them to login to obtain session credentials. 
 
 //  Local config allows for dynamic definition of file paths and single point for private paths
-include "../php/Config_severus.php";
+
+include "../php/Config.php";
 
 // Sets path for files and start session.
 require PRIVATE_SESSION."sessionConfig.php";
