@@ -22,10 +22,9 @@ if (isset($_POST['register']))
 } 
 else 
 {
-	if(isset($_SESSION['Email']))
-  {
-  	$reg_email = $_SESSION['Email'];
-  }
+	if(isset($_SESSION['RegEmail'])){
+  		$reg_email = $_SESSION['RegEmail'];
+  	}
 	include $html_files.'register.html';
 }
 ?> 

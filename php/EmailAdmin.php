@@ -1,6 +1,10 @@
 <?php
 //  Local config allows for dynamic definition of file paths and single point for private paths
+<<<<<<< HEAD
 include "Config.php";
+=======
+include "Config_severus.php";
+>>>>>>> branch 'master2' of https://github.com/bolitech/ContactMailer.git
 
 // Sets path for files and start session.
 require PRIVATE_SESSION."sessionConfig.php";

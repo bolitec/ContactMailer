@@ -6,11 +6,30 @@
 
 //  Local config allows for dynamic definition of file paths and single point for private paths
 include "Config.php";
+$email = null;
+$passcode = null;
 
-if (isset ($_GET['email'])){
-	$email = $_GET['email'];
+if (isset ($_GET['email']) || isset($_GET['passcode']) || isset($_POST['passcode'])){
+	if (isset ($_GET['email'])){
+		$email = $_GET['email'];
+	}
+	if (isset($_GET['passcode']) ){
+		$passcode = $_GET['passcode'];
+	}
+	if (isset($_POST['passcode'])){
+		$passcode = $_POST['passcode'];
+		$email = $_POST['email'];
+	}
+	
+	// Connects to member table of contact_mailer Database
+	//  Include the db connection script from non public_html location
+	include PRIVATE_DB."dbConfig.php";
+	
+	// Get encrypted password as reset code
+	include $secured_php.'sql_reset_pass.php';
+	
 } else {
-	$MsgTitle = "LogonMsg Page";
+	$MsgTitle = "Logon Message Page";
 	$redirect = "Logon.php";
 	$MsgType1 = "ResetPassEmail.php";
 	$MsgType2 = "Message RPE-001";
@@ -31,14 +50,19 @@ include('Mail/mail.php');     // adds the enhanced send function
 $text = 'Welcome to the '.$regemailtitle.'!
 You have requested to reset your password for Email:'.$email.'
 
-Please copy the link provided to your browser in order to perform password reset';
+Please copy the link provided to your browser in order to perform password reset
+ '.$reset_url;
 
 // set the html variable
 $html = '<html><body><h2>Welcome to the '.$regemailtitle.'! </h2>
-<p>You have requested to reset your password for <b>Email:  '.$email.'. </b></p>
+<p>You have requested to reset your password for Email:  '.$email.'. </p>
 
-<font size=2>
-<p>Please click on the link provided to perform password reset</p>
+<p>Please click on the link provided to change your password
+		<a href="'.$reset_url.'" > Reset Your Password Here.</a></p>
+<p>If you did not request this change, please reply to our webmaster and report the incident.  
+We do our best to prevent spam and secure our server and application to prevent unwanted email.</p>
+<p>Thank you!</p>
+<p>From the Contact Mailer App Team</p>				
 </body></html>';
 
 // set file (not currently used)
