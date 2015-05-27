@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<buildpath>
-<<<<<<< HEAD
-	<buildpathentry kind="src" path=""/>
-=======
-	<buildpathentry excluding="secure/prod/" kind="src" path=""/>
->>>>>>> branch 'master2' of https://github.com/bolitech/ContactMailer.git
-	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
-</buildpath>
