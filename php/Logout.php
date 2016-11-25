@@ -4,7 +4,7 @@
 //  We destroy the session by calling session config file, intializing and destroying current session. 
 //  We also clear the $_SESSION array.
 //  Local config allows for dynamic definition of file paths and single point for private paths
-include "Config.php";
+include "setConfig.php";
 
 // Sets path for files and start session.
 require PRIVATE_SESSION."sessionConfig.php";

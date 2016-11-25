@@ -42,20 +42,30 @@ a:active{
 input[type="submit"]:hover {
 	background-color:#e6fdc9
 }
+input[type="button"]:hover {
+	background-color:#e6fdc9
+}
 .button:hover {
 	background-color:#33ff00
 }
 .center{
 	margin:auto;
+	background-color:#F1F1F9;
+}
+.width800{
+	margin:auto;
+	width:800px;
+	background-color:#F1F1F9;
+}
+.width500{
+	margin:auto;
 	width:500px;
 	background-color:#F1F1F9;
 }
-table
-{
+table{
 border-collapse:collapse;
 }
-table, td, th
-{
+table, td, th{
 border:0;
 /* text-align:center;*/
 }

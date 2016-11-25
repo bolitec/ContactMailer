@@ -3,7 +3,7 @@
 //  If they are logged in, they are shown the members area. 
 //  If they are not logged in they are redirected to the logon page. 
 //  Local config allows for dynamic definition of file paths and single point for private paths
-include "Config.php";
+include "setConfig.php";
 
 // Sets path for files and start session.
 require PRIVATE_SESSION."sessionConfig.php";

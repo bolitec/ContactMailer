@@ -1,8 +1,8 @@
 <?php 
 //  This establishes the database variables and initiates the db connection
 $host     = "localhost";			// Host name 
-$username = "root";	// Mysql username 
-$passpass = "root";	// Mysql password 
+$username = "your_user";	// Mysql username 
+$passpass = "your_password";	// Mysql password 
 $db_name  = "contact_mailer";	// Database name 
 $tbl_name = "member";				// member Table name
 $tbl_name2 = "profile";				// user Table name

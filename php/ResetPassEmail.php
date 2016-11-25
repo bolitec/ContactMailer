@@ -5,7 +5,7 @@
 //  If logon form has not been posted, it shows them the logon form.
 
 //  Local config allows for dynamic definition of file paths and single point for private paths
-include "Config.php";
+include "setConfig.php";
 $email = null;
 $passcode = null;
 

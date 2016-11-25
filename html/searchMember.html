@@ -1,77 +1,52 @@
-<head> 
-<title>Member Search</title> 
-<style type="text/css">
-<!-- ********************* -->
-<!-- Inline Menu Section   -->
-<!-- ********************* -->
-<!-- this first file csshover.htc is used in IE to fix hover over functionality -->
-
-body {
-behavior:url(../html/csshover.htc);
-font-size:100%;}
-
-ul
-{
-float:left;
-width:100%;
-padding:0;
-margin:0;
-list-style-type:none;
-}
-a
-{
-float:left;
-width:6em;
-text-decoration:none;
-color:white;
-background-color:purple;
-padding:0.2em 0.6em;
-border-right:1px solid white;
-}
-.button
-{
-float:right;
-width:6em;
-text-decoration:none;
-color:white;
-background-color:purple;
-padding:0em 0.0em;
-<!-- border-right:0px solid white; -->
-}
-a:hover {background-color:#ff3300}
-input[type="submit"]:hover {background-color:#e6fdc9}
-.button:hover {background-color:#33ff00}
-li {display:inline}
-
-</style></head>
-
-
+<!DOCTYPE html>
 <html>
-
-<body BACKGROUND="../images/desert-4.jpg" BGCOLOR="#FFFFFF" TEXT="#66066" LINK="#000080" VLINK="#000080" alink="#0000FF">
-
-<center>
-
+<head>
+<title>Member Search</title> 
+<!-- ************************************************************************************ -->
+<!-- searchMember form allow to look for members in the database by name or email
+<!-- Approximate search is also capable of finding global strings or patterns in any of the
+<!-- fields on the form  
+<!-- ************************************************************************************ -->
+<link rel="stylesheet" type="text/css" href="../html/css/MainStyle.css" media="screen, projection" />
+</head>
+<body>
+<div class="width500">
 <form name="searchForm" action="<?php echo $redirect ?>" method="post"> 
-
-<table width="600" bgcolor="#660066" cellpadding="0" border="0" colspan="0" cellspacing="0">
+<!-- *******************************************************************************-->
+<!-- *** This is STEP-1 section of the table where the form captures User profile info 
+<!-- *******************************************************************************-->
+<table >
 	<tr>
 		<td bgcolor="#000080" colspan="2" align="center">
-			<img style="vertical-align: middle;" src="<? echo $hdr_image ?>" alt="Caritas" width="596"></img></td></tr>
+			<img style="vertical-align: middle;" src="<? echo $hdr_image ?>" alt="" height="100" /></td></tr>
 	<tr>
-		<td width="500" colspan="2" align="center"><font face="arial,helvetica" size="2" color="WHITE"><b><?php echo $MsgTitle ?></b></td></tr></font> 
+		<td colspan="2" align="center">
+			<font face="arial,helvetica" size="2" >
+			<b><?php echo $MsgTitle ?></b></font></td></tr> 
 	<tr>
-		<td width="500" colspan="2" bgcolor="#F1F1F9" align="right"><font face="arial,helvetica" size="1" ><?php echo $MsgType1 ?></td>
+		<td colspan="2" bgcolor="#F1F1F9" align="right">
+			<font face="arial,helvetica" size="1" >
+			<?php echo $MsgType1 ?></font></td>
 	<tr>
-		<td width="500" colspan="2" bgcolor="#F1F1F9" align="left"><font face="arial,helvetica" size="2" ><?php echo $MsgType2 ?></td>
+		<td colspan="2" bgcolor="#F1F1F9" align="left">
+			<font face="arial,helvetica" size="2" >
+			<?php echo $MsgType2 ?></font></td>
 	<tr>
-		<td width="500" colspan="2" bgcolor="#F1F1F9"><font face="arial,helvetica" size="1"><br></br></td>
+		<td colspan="2" bgcolor="#F1F1F9">
+			<font face="arial,helvetica" size="1">
+			<br /></font></td>
 	<tr>
-		<td width="500" colspan="2" bgcolor="#F1F1F9" align="CENTER"><font face="arial,helvetica" size="2"><?php echo $Msg1 ?></td>
+		<td colspan="2" bgcolor="#F1F1F9" align="CENTER">
+			<font face="arial,helvetica" size="2">
+			<?php echo $Msg1 ?></font></td>
 	<tr>
-		<td width="500" colspan="2" bgcolor="#F1F1F9" align="CENTER"><font face="arial,helvetica" size="2" ><?php echo $Msg2 ?></td>
+		<td colspan="2" bgcolor="#F1F1F9" align="CENTER">
+			<font face="arial,helvetica" size="2" >
+			<?php echo $Msg2 ?></font></td>
 	<tr>
-		<td width="500" colspan="2" bgcolor="#F1F1F9"><font face="arial,helvetica" size="1"><br></br></td>
+		<td colspan="2" bgcolor="#F1F1F9">
+			<font face="arial,helvetica" size="1">
+			<br /></font><hr></td>
 
 <!-- This is the Member's Name  -->
 <!-- This is the Member's Name  -->
@@ -79,20 +54,20 @@ li {display:inline}
  	<tr>
 		<td colspan="1" width="400" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2">
-			Member Last Name: </td>
+			Member Last Name: </font></td>
 		<td colspan="1" width="400" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2">
-			Member First Name: </td></tr>
+			Member First Name: </font></td></tr>
  	<tr>
 		<td colspan="1" width="400" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2">
-			<input type="text" name="last" size="30" value="<? echo $last ?>" /></td>
+			<input type="text" name="last" size="30" value="<? echo $last ?>" /></font></td>
 		<td colspan="1" width="400" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2">
-			<input type="text" name="first" size="30" value="<? echo $first ?>" /></td></tr>
+			<input type="text" name="first" size="30" value="<? echo $first ?>" /></font></td></tr>
  	<tr>
 		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
-			<font face="arial, helvetica" size="2"><br /></td></tr>
+			<font face="arial, helvetica" size="2"><br /></font></td></tr>
 
 <!-- This is the Member's Email  -->
 <!-- This is the Member's Email  -->
@@ -100,14 +75,15 @@ li {display:inline}
  	<tr>
 		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2">
-		Member Email: </td></tr>
+		Member Email: </font></td></tr>
  	<tr>
 		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2">
-			<input type="text" name="email" size="50" maxlength="50" value="<? echo $email ?>" /></td></tr>
+			<input type="text" name="email" size="50" maxlength="50" value="<? echo $email ?>" /></font></td></tr>
  	<tr>
 		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
-			<font face="arial, helvetica" size="2"><br /></td></tr>
+			<font face="arial, helvetica" size="2">
+			<br /></font></td></tr>
 
 <!-- This is the email group to search -->
 <!-- This is the email group to search -->
@@ -115,14 +91,14 @@ li {display:inline}
  	<tr>
 		<td colspan="1" width="200" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2">
-			Member Group: </td>
+			Member Group: </font></td>
 		<td colspan="1" width="200" bgcolor="#F1F1F9" align="center">
-			<font face="arial, helvetica" size="2"></td></tr>
+			<font face="arial, helvetica" size="2"></font></td></tr>
 
 	<tr>
 		<td colspan="1" width="100" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2">
-			<SELECT NAME="group" size="1" VALUE="<? echo $group ?>">
+			<SELECT NAME="group" size="1" >
 			<? foreach($grpOptions as $grp)
 			{
 				if ($group==$grp)
@@ -135,39 +111,51 @@ li {display:inline}
 				}
 			}
 			?>
-			</SELECT></td>
+			</SELECT></font></td>
 
 <!-- This is the select approximate search button -->
 <!-- This is the select approximate search button -->
 <!-- This is the select approximate search button -->
 		<td colspan="1" width="300" bgcolor="#F1F1F9" align="left">
 			<font face="arial, helvetica" size="2">
-    Approx. Search: 
-  <input type="checkbox" name="approx" value="Yes"/> Yes
-  <input type="radio" name="level" value="1"/>%
-  <input type="radio" name="level" value="2"/>%%</td></tr>
+    		Approx. Search: 
+  			<input type="checkbox" name="approx" value="Yes"/> Yes
+  			<input type="radio" name="level" value="1"/>%
+  			<input type="radio" name="level" value="2"/>%%</font></td></tr>
     
 	<tr>
 		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
-			<font face="arial, helvetica" size="2"><br /></td></tr>
+			<font face="arial, helvetica" size="2">
+			<br /></font><hr></td></tr>
 	<tr>
 		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2">
- 			<input type="submit" name="searchForm" value='Search' /></td></tr>
-</form>
+ 			<input type="submit" name="searchForm" value='Search' /></font></td></tr>
+	<tr>
+		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2">
+			<br /></font></td></tr>
 
 <!-- Buttons defined for View, Post, and Renew funcionality -->
 	<tr>
-		<td width="500" colspan="2" align="left" bgcolor="#F1F1F9"><font face="arial,helvetica" size="2">
-		<ul>
-<!--		<li><a href="http://www.brothercharles.org/">NAmerica</a></li>
-		<li><a href="http://www.brothercharlesofjesus.org">Boston</a></li>  -->
-		<li><a href="Member.php">Admin</a></li>
-		<li><a href="EmailAdmin.php">Add Email</a></li>
-		<li><a href="Logout.php">Logout</a></li>
-		</ul>
+		<td width="500" colspan="2" align="left" bgcolor="#F1F1F9">
+			<font face="arial,helvetica" size="2"></font>
+			<ul>
+<!--			<li><a href="http://www.brothercharles.org/">NAmerica</a></li>
+				<li><a href="http://www.brothercharlesofjesus.org">Boston</a></li>  -->
+				<li><a href="Member.php">Admin</a></li>
+				<li><a href="EmailAdmin.php">Add Email</a></li>
+				<li><a href="Logout.php">Logout</a></li>
+			</ul>
 	<tr>
-		<td width="555" colspan="2" align="center"><font face="arial,helvetica" size="1" color="WHITE"><b>Bolitech.com 2008-<?php echo date("Y") ?></b></td></tr></font> 
-		<td width="555" colspan="2" align="center"><font face="arial,helvetica" size="1" color="WHITE"><b>searchMember.html</b></td></tr></font> 
-</table>
-</center></html>
+		<td colspan="2" align="center">
+			<font face="arial" size="1"><br />
+			searchMember.html</font></td></tr>
+	<tr>
+		<td colspan="2" align="center">
+			<font face="arial" size="1">
+			<?php echo ($brand." ".date("Y")) ?></font></td></tr>
+</table> 
+</form>
+</div>
+</html>

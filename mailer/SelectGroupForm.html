@@ -1,173 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head> 
-<title>Group Email Send</title> 
-<style type="text/css">
-<!-- ********************* -->
-<!-- Inline Menu Section   -->
-<!-- ********************* -->
-<!-- this first file csshover.htc is used in IE to fix hover over functionality -->
-ul{
-	float:left;
-	width:100%;
-	padding:0;
-	margin:0;
-	list-style-type:none;
-	font-family:arial,helvetica;
-	font-size:small;
-}
-li {
-	display:inline;
-	font-family:arial,helvetica;
-	font-size:small;
-}
-a:link{
-	float:left;
-	width:6em;
-	text-decoration:none;
-	color:white;
-	background-color:purple;
-	padding:0.2em 0.6em;
-	border-right:1px solid white;
-}
-a:visited{
-	color:#000080;
-}
-a:hover{
-	background-color:#ff3300
-}
-a:active{
-	color:#000080;
-}
-.button{
-	float:right;
-	width:6em;
-	text-decoration:none;
-	color:white;
-	background-color:purple;
-	padding:0em 0.0em;
-/*<!-- border-right:0px solid white; -->*/
-}
-input[type="submit"]:hover {
-	background-color:#e6fdc9;
-}
-input[type="text"]{
-	text-align:center;
-}
-.button:hover {
-	background-color:#33ff00
-}
-body {
-	font-size:100%;
-	background-image:url("../images/desert-4.jpg");
-	background-color:#FFFFFF;
-	color:#660066;
-	margin:0;
-	padding:0;
-}
-.center{
-	margin:auto;
-	width:400px;
-	background-color:#F1F1F9;
-	
-}
-table
-{
-border-collapse:collapse;
-}
-table, td, th
-{
-border:0;
-/* text-align:center;*/
-}
-
-</style>
+<title>Emailer</title> 
+<!-- ************************************************************************************ -->
+<!-- The Emailer form allows you to attach PDF/HTML/Text messages to your emails and      -->
+<!-- and select one or many emails from your groups to receive the communication          -->
+<!-- ************************************************************************************ -->
+<link rel="stylesheet" type="text/css" href="../html/css/MainStyle.css?ver=1.1" media="screen, projection" />
 </head>
 <body>
+<div class="width500">
 <form name="emailForm" action="<?php echo $_SERVER['PHP_SELF']?>" method="POST" enctype="multipart/form-data">
 <input type="hidden" name="check_submit" value="1" />
-
-<div class="center">
 <table>
 	<tr>
-		<td width="400" bgcolor="#000080" colspan="2" align="center">
-			<img style="vertical-align:middle;" src="<? echo $hdr_image ?>" alt="Caritas" width="622"></img></td></tr>
+		<td colspan="1" align="center">
+			<img style="vertical-align: middle;" src="<? echo $hdr_image ?>" alt="" height="100" /></td></tr>
 	<tr>
-		<td width="400" bgcolor="#660066" colspan="2" align="center">
-		<font face="arial,helvetica" size="2" color="WHITE">
+		<td colspan="1" align="center">
+		<font face="arial,helvetica" size="2" >
 		<b><?php echo($MsgTitle) ?> </b></font></td></tr>
 	<tr>
-		<td width="400" colspan="2" bgcolor="#F1F1F9" align="right">
+		<td colspan="1" bgcolor="#F1F1F9" align="right">
 		<font face="arial,helvetica" size="1" >
 		<?php echo($MsgType1) ?></font></td></tr>
 	<tr>
-		<td width="400" colspan="2" bgcolor="#F1F1F9" align="left"><font face="arial,helvetica" size="2" ><?php echo($MsgType2) ?></font></td></tr>
+		<td colspan="1" bgcolor="#F1F1F9" align="left">
+		<font face="arial,helvetica" size="2" >
+		<?php echo($MsgType2) ?></font></td></tr>
 	<tr>
-		<td width="400" colspan="2" bgcolor="#F1F1F9"><font face="arial,helvetica" size="1"><br /></font></td></tr>
+		<td colspan="1" bgcolor="#F1F1F9">
+		<font face="arial,helvetica" size="1">
+		<br /></font></td></tr>
 	<tr>
-		<td width="400" colspan="2" bgcolor="#F1F1F9" align="CENTER"><font face="arial,helvetica" size="2"><?php echo($Msg1) ?></font></td></tr>
+		<td colspan="1" bgcolor="#F1F1F9" align="CENTER">
+		<font face="arial,helvetica" size="2">
+		<?php echo($Msg1) ?></font></td></tr>
 	<tr>
-		<td width="400" colspan="2" bgcolor="#F1F1F9" align="CENTER"><font face="arial,helvetica" size="2" ><?php echo($Msg2) ?></font></td></tr>
+		<td colspan="1" bgcolor="#F1F1F9" align="CENTER">
+		<font face="arial,helvetica" size="2" >
+		<?php echo($Msg2) ?></font></td></tr>
 	<tr>
-		<td width="400" colspan="2" bgcolor="#F1F1F9"><font face="arial,helvetica" size="1"><br /></font></td></tr>
-	<tr>
-		<td width="400" colspan="2" align="center" bgcolor="#660066">
-			<font face="arial,helvetica" size="1" ><br /></font></td></tr>
+		<td colspan="1" align="center" >
+			<font face="arial,helvetica" size="1" >
+			<br /></font><hr></td></tr> 
 
 <!-- This is the Sender's Name  -->
 <!-- This is the Sender's Name  -->
 <!-- This is the Sender's Name  -->
  	<tr>
-		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+		<td colspan="2" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2">
 			Sender Name: </font></td></tr>
  	<tr>
-		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+		<td colspan="2" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2">
 			<input type="text" name="Name" size="60"  value="<? echo($sender_name) ?>" readonly/></font></td></tr>
  	<tr>
-		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
-			<font face="arial, helvetica" size="2"><br /></font></td></tr>
+		<td colspan="2" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2">
+			<br /></font></td></tr>
 
 <!-- This is the Sender's Email  -->
 <!-- This is the Sender's Email  -->
 <!-- This is the Sender's Email  -->
  	<tr>
-		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+		<td colspan="2" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2">
 			Sender Email: </font></td></tr>
  	<tr>
-		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+		<td colspan="2" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2">
 			<input type="text" name="Semail" size="60" maxlength="60" value="<? echo($sender_email) ?>" readonly /></font></td></tr>
  	<tr>
-		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+		<td colspan="2" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2"><br /></font></td></tr>
 
 <!-- This is the email subject line -->
 <!-- This is the email subject line -->
 <!-- This is the email subject line -->
  	<tr>
-		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+		<td colspan="2" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2">
 			Subject: </font></td></tr>
  	<tr>
-		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+		<td colspan="2" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2">
-			<input type="text" name="Subject" size="100" maxlength="100" /></font></td></tr>
+			<input type="text" name="Subject" size="75" maxlength="100" /></font></td></tr>
  	<tr>
-		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+		<td colspan="2" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2"><br /></font></td></tr>
 
 <!-- This is the email group to send to -->
 <!-- This is the email group to send to -->
 <!-- This is the email group to send to -->
  	<tr>
-		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+		<td colspan="2" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2">
 			Select Group: </font></td></tr>
 	<tr>
-		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+		<td colspan="2" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2">
 			<SELECT NAME=EmailGroup size="1" >
 			<?php foreach($grpOptions as $grp)
@@ -202,31 +134,31 @@ border:0;
       <input type="checkbox" name="Colors[]" value="gray" /> Gray
     <br /><br /> -->
  	<tr>
-		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+		<td colspan="2" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2"><br /></font></td></tr>
 
 <!-- This is the select all groups radio button -->
 <!-- This is the select all groups radio button -->
 <!-- This is the select all groups radio button -->
  	<tr>
-		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+		<td colspan="2" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2">
     Send email to All Groups: 
-      <input type="checkbox" name="SendAll" value="Yes"/> Yes</font>
+      <input type="checkbox" name="SendAll" value="Yes"/> Yes</font></td>
 
 	<tr>
-		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+		<td colspan="2" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2"><br /></font></td></tr>
 
 <!-- This is the email message -->
 <!-- This is the email message -->
 <!-- This is the email message -->
  	<tr>
-		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+		<td colspan="2" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2">
 			Email Message:</font></td></tr>
 	<tr>
-		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+		<td colspan="2" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2">
 			<textarea name="Comments" rows="5" cols="60"></textarea></font></td></tr>
 
@@ -234,64 +166,68 @@ border:0;
 <!-- This is the HTML file browse upload button -->
 <!-- This is the HTML file browse upload button -->
  	<tr>
-		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+		<td colspan="2" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2"><br />
 			HTML page content:
 			<input type="file" name="html_file" size="40"></font></td></tr>
  	<tr>
-		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+		<td colspan="2" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2"></font></td></tr>
 
 <!-- This is the PDF file browse upload button -->
 <!-- This is the PDF file browse upload button -->
 <!-- This is the PDF file browse upload button -->
  	<tr>
-		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+		<td colspan="2" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2"><br />
 			PDF File Attachment:
 			<input type="file" name="pdf_file" size="40"></font></td></tr>
  	<tr>
-		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+		<td colspan="2" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2"><br /></font></td></tr>
 
 <!-- This is the select attachment button -->
 <!-- This is the select attachment radio button -->
 <!-- This is the select Attachment radio button -->
  	<tr>
-		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
-			<font face="arial, helvetica" size="2">
-    File(s) Send options: 
-      <input type="checkbox" name="attach" value="PDF"/> PDF Only
-      <input type="checkbox" name="attach" value="HTML"/> HTML Only
-      <input type="checkbox" name="attach" value="Both"/> HTML/PDF Both
-      <input type="checkbox" name="attach" value="Msg"/> Message Only
-      </font></td></tr>
+		<td colspan="2" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="1">
+    		File(s) Send options: 
+      		<input type="checkbox" name="attach" value="PDF"/> PDF Only
+      		<input type="checkbox" name="attach" value="HTML"/> HTML Only
+      		<input type="checkbox" name="attach" value="Both"/> HTML/PDF Both
+      		<input type="checkbox" name="attach" value="Msg"/> Message Only
+      		</font></td></tr>
 
 	<tr>
-		<td colspan="2" width="400" bgcolor="#F1F1F9" align="center">
+		<td colspan="1" bgcolor="#F1F1F9" align="center">
 			<font face="arial, helvetica" size="2"><br /></font></td></tr>
 	<tr>
-		<td width="400" colspan="2" align="center" bgcolor="#660066">
-			<font face="arial,helvetica" size="1" ><br />
-			</font></td></tr> 
+		<td colspan="1" align="center" >
+			<font face="arial,helvetica" size="1" >
+			<br /></font><hr></td></tr> 
 	<tr>
-		<td width="200" colspan="1" bgcolor="#F1F1F9" align="center">
+		<td colspan="1" bgcolor="#F1F1F9" align="center" >
+			<font face="arial,helvetica" size="2">
+ 			<input type="submit" name="emailForm" value="Send Email" /></font></td></tr>
+	<tr>
+		<td colspan="1" bgcolor="#F1F1F9" align="center">
 			<ul>
 				<li><a href="../php/Member.php">Home</a></li>	
 				<li><a href="../php/Logout.php">Logout</a></li>
 			</ul></td>		
-		<td colspan="1" width="200" bgcolor="#F1F1F9" align="right" >
-			<font face="arial,helvetica" size="2">
- 			<input type="submit" name="emailForm" value="Send Email" /></font></td></tr>
+ 	<tr>
+		<td colspan="2" bgcolor="#F1F1F9" align="center">
+			<font face="arial, helvetica" size="2"><br /></font></td></tr>
 	<tr>
-		<td width="400" colspan="2" align="center" bgcolor="#660066">
-			<font face="arial,helvetica" size="1" color="WHITE">
-			<b>Bolitech.com 2008-<?php echo date("Y") ?></b></font></td></tr> 
+		<td colspan="2" align="center" >
+			<font face="arial" size="1">
+			SelectGroupForm.html</font></td></tr> 
 	<tr>
-		<td width="400" colspan="2" align="center" bgcolor="#660066">
-			<font face="arial,helvetica" size="1" color="WHITE">
-			<b>SelectGroupForm.html</b></font></td></tr> 
-</table></div>
+		<td colspan="2" align="center">
+		<font face="arial" size="1">
+		<?php echo ($brand." ".date("Y")) ?></font></td></tr>
+</table> 
 </form>
-</body>
+</div>
 </html>

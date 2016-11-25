@@ -5,7 +5,7 @@
 // If the form has not been submitted, they are shown the registration form, which collects the email and password. 
 
 //  Local config allows for dynamic definition of file paths and single point for private paths
-include "Config.php";
+include "setConfig.php";
 
 // Sets path for files and start session.
 require PRIVATE_SESSION."sessionConfig.php";

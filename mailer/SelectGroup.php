@@ -5,7 +5,7 @@
 
 //  Local config allows for dynamic definition of file paths and single point for private paths
 
-include "../php/Config.php";
+require_once "../php/setConfig.php";
 
 // Sets path for files and start session.
 require PRIVATE_SESSION."sessionConfig.php";
